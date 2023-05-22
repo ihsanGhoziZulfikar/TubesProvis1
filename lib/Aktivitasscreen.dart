@@ -10,8 +10,6 @@ class AktivitasScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                // aktivitaseN2 (1:313)
-                // padding: EdgeInsets.only(left: 16, right: 16),
                 margin: EdgeInsets.fromLTRB(14, 0, 0, 34),
                 child: Text(
                   'Aktivitas',
@@ -24,7 +22,6 @@ class AktivitasScreen extends StatelessWidget {
                 ),
               ),
               Container(
-                // autogroupc1tcALN (Rcw4neTrETWwQdoz6Uc1Tc)
                 margin: EdgeInsets.fromLTRB(10, 0, 10, 240),
                 padding: EdgeInsets.fromLTRB(10, 19, 10, 58),
                 // width: 500,
@@ -37,7 +34,6 @@ class AktivitasScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Container(
-                      // autogrouprmbcJL6 (Rcw5B8pNrMdFc735MPRmbC)
                       margin: EdgeInsets.fromLTRB(7, 0, 14, 21),
                       width: double.infinity,
                       height: 88,
@@ -58,7 +54,6 @@ class AktivitasScreen extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      // autogroupr5btvcN (Rcw5KYk2WhmCXoWXbLr5bt)
                       margin: EdgeInsets.fromLTRB(3, 0, 5, 23),
                       width: double.infinity,
                       height: 31,
@@ -74,8 +69,6 @@ class AktivitasScreen extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Container(
-                            // group205eHU (1:353)
-                            // margin: EdgeInsets.fromLTRB(0, 0, 18, 0),
                             width: 110,
                             height: double.infinity,
                             decoration: BoxDecoration(
@@ -102,8 +95,6 @@ class AktivitasScreen extends StatelessWidget {
                             ),
                           ),
                           Container(
-                            // group204Av2 (1:356)
-                            // margin: EdgeInsets.fromLTRB(0, 0, 17, 0),
                             width: 110,
                             height: double.infinity,
                             decoration: BoxDecoration(
@@ -130,7 +121,6 @@ class AktivitasScreen extends StatelessWidget {
                             ),
                           ),
                           Container(
-                            // group206um8 (1:359)
                             width: 110,
                             height: double.infinity,
                             decoration: BoxDecoration(
@@ -160,7 +150,6 @@ class AktivitasScreen extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      // autogroupk9lrUBx (Rcw5YHsnvuteJy8wqbK9Lr)
                       margin: EdgeInsets.fromLTRB(0, 0, 0, 29),
                       padding: EdgeInsets.fromLTRB(16, 6, 16, 4),
                       width: double.infinity,
@@ -173,7 +162,6 @@ class AktivitasScreen extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Text(
-                            // yusufbakerymB4 (1:363)
                             'Yusuf Bakery',
                             style: TextStyle(
                               fontSize: 11,
@@ -198,7 +186,6 @@ class AktivitasScreen extends StatelessWidget {
                             width: 67,
                           ),
                           Text(
-                            // rp5000000Qjp (1:365)
                             'Rp. 5,000,000',
                             style: TextStyle(
                               fontSize: 11,
@@ -224,7 +211,6 @@ class AktivitasScreen extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Container(
-                            // cendolihsansegerpoY (1:367)
                             margin: EdgeInsets.fromLTRB(0, 0, 36, 0),
                             child: Text(
                               'Cendol Ihsan Seger',
@@ -237,7 +223,6 @@ class AktivitasScreen extends StatelessWidget {
                             ),
                           ),
                           Container(
-                            // rp1000000YUe (1:368)
                             margin: EdgeInsets.fromLTRB(0, 0, 67, 0),
                             child: Text(
                               'Rp. 1,000,000',
@@ -250,7 +235,6 @@ class AktivitasScreen extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            // rp4000000Ftr (1:369)
                             'Rp. 4,000,000',
                             style: TextStyle(
                               fontSize: 11,
@@ -263,7 +247,6 @@ class AktivitasScreen extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      // autogrouppxp6oQa (Rcw5qNDg6z1awbvL68pxp6)
                       padding: EdgeInsets.fromLTRB(16, 6, 16, 4),
                       width: double.infinity,
                       decoration: BoxDecoration(
@@ -275,7 +258,6 @@ class AktivitasScreen extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Text(
-                            // dodolvivinWpn (1:371)
                             'Dodol Vivin',
                             style: TextStyle(
                               fontSize: 11,
@@ -288,7 +270,6 @@ class AktivitasScreen extends StatelessWidget {
                             width: 76,
                           ),
                           Text(
-                            // rp500000STY (1:372)
                             'Rp. 500,000',
                             style: TextStyle(
                               fontSize: 11,
@@ -301,7 +282,6 @@ class AktivitasScreen extends StatelessWidget {
                             width: 76,
                           ),
                           Text(
-                            // rp2000000Nc6 (1:373)
                             'Rp. 2,000,000',
                             style: TextStyle(
                               fontSize: 11,
