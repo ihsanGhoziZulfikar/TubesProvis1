@@ -8,7 +8,6 @@ class SyaratdanKetentuan extends StatelessWidget {
         child: Container(
           width: double.infinity,
           child: Container(
-            // wireframeakunsyaratketentuanzb (1:1987)
             width: double.infinity,
             height: 2598,
             decoration: BoxDecoration(
@@ -18,7 +17,6 @@ class SyaratdanKetentuan extends StatelessWidget {
             child: Stack(
               children: [
                 Positioned(
-                  // group188vox (1:1995)
                   left: 0,
                   top: 176,
                   child: Container(
@@ -33,7 +31,6 @@ class SyaratdanKetentuan extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Container(
-                          // autogroup9wtcBjt (Rcwo4MCN7gTYvs8zjU9wTc)
                           margin: EdgeInsets.fromLTRB(0, 0, 0, 19),
                           padding: EdgeInsets.fromLTRB(12, 12, 12.74, 13),
                           width: double.infinity,
@@ -43,18 +40,17 @@ class SyaratdanKetentuan extends StatelessWidget {
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: Container(
-                            // group207gge (1:2006)
                             width: double.infinity,
                             height: double.infinity,
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Container(
-                                  // 2kW (1:2008)
                                   margin: EdgeInsets.fromLTRB(0, 0, 3.26, 0),
                                   child: Text(
                                     '1.',
                                     style: TextStyle(
+                                      decoration: TextDecoration.none,
                                       fontSize: 16,
                                       fontWeight: FontWeight.w500,
                                       height: 1.265,
@@ -63,13 +59,13 @@ class SyaratdanKetentuan extends StatelessWidget {
                                   ),
                                 ),
                                 Container(
-                                  // layananpinjammeminjamberbasist (1:2007)
                                   constraints: BoxConstraints(
-                                    maxWidth: 333,
+                                    maxWidth: 300,
                                   ),
                                   child: Text(
                                     'Layanan Pinjam Meminjam Berbasis Teknologi Informasi ("Pinjaman Fintech") adalah perjanjian antara Pemberi Pinjaman dan Penerima Pinjaman, di mana setiap pihak bertanggung jawab atas risiko yang timbul dari perjanjian tersebut.',
                                     style: TextStyle(
+                                      decoration: TextDecoration.none,
                                       fontSize: 16,
                                       fontWeight: FontWeight.w500,
                                       height: 1.265,
@@ -82,7 +78,6 @@ class SyaratdanKetentuan extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          // autogrouppqyzPUa (RcwoDvkjkTD4ALr1u3PqYz)
                           margin: EdgeInsets.fromLTRB(0, 0, 0, 19),
                           padding: EdgeInsets.fromLTRB(12, 13, 12, 11),
                           width: double.infinity,
@@ -92,7 +87,6 @@ class SyaratdanKetentuan extends StatelessWidget {
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: Container(
-                            // group208V1p (1:2009)
                             width: double.infinity,
                             height: double.infinity,
                             child: Row(
@@ -104,6 +98,7 @@ class SyaratdanKetentuan extends StatelessWidget {
                                   child: Text(
                                     '2.',
                                     style: TextStyle(
+                                      decoration: TextDecoration.none,
                                       fontSize: 16,
                                       fontWeight: FontWeight.w500,
                                       height: 1.265,
@@ -114,11 +109,12 @@ class SyaratdanKetentuan extends StatelessWidget {
                                 Container(
                                   // pemberipinjamanbertanggungjawa (1:2010)
                                   constraints: BoxConstraints(
-                                    maxWidth: 331,
+                                    maxWidth: 300,
                                   ),
                                   child: Text(
                                     'Pemberi Pinjaman bertanggung jawab penuh atas risiko kredit atau gagal bayar. Tidak ada lembaga atau otoritas negara yang bertanggung jawab atas risiko tersebut atau memberikan kompensasi atas kerugian atau konsekuensi lain yang terjadi sebagai akibat dari risiko tersebut.',
                                     style: TextStyle(
+                                      decoration: TextDecoration.none,
                                       fontSize: 16,
                                       fontWeight: FontWeight.w500,
                                       height: 1.265,
@@ -153,6 +149,7 @@ class SyaratdanKetentuan extends StatelessWidget {
                                   child: Text(
                                     '3.',
                                     style: TextStyle(
+                                      decoration: TextDecoration.none,
                                       fontSize: 16,
                                       fontWeight: FontWeight.w500,
                                       height: 1.265,
@@ -163,11 +160,12 @@ class SyaratdanKetentuan extends StatelessWidget {
                                 Container(
                                   // denganpersetujuanpenggunapenye (1:2013)
                                   constraints: BoxConstraints(
-                                    maxWidth: 332,
+                                    maxWidth: 300,
                                   ),
                                   child: Text(
                                     'Dengan persetujuan Pengguna, Penyelenggara dapat mengakses, memperoleh, menyimpan, mengelola, dan menggunakan data pribadi Pengguna ("Pemanfaatan Data") dalam perangkat elektronik seperti smartphone, perangkat keras dan lunak, dokumen elektronik, aplikasi, atau sistem elektronik yang dimiliki atau dikuasai oleh Pengguna. Pengguna akan diberitahu mengenai tujuan, batasan, dan mekanisme Pemanfaatan Data tersebut sebelum memberikan persetujuan.',
                                     style: TextStyle(
+                                      decoration: TextDecoration.none,
                                       fontSize: 16,
                                       fontWeight: FontWeight.w500,
                                       height: 1.265,
@@ -202,6 +200,7 @@ class SyaratdanKetentuan extends StatelessWidget {
                                   child: Text(
                                     '4.',
                                     style: TextStyle(
+                                      decoration: TextDecoration.none,
                                       fontSize: 16,
                                       fontWeight: FontWeight.w500,
                                       height: 1.265,
@@ -212,11 +211,12 @@ class SyaratdanKetentuan extends StatelessWidget {
                                 Container(
                                   // disarankanagarpemberipinjamany (1:2016)
                                   constraints: BoxConstraints(
-                                    maxWidth: 321,
+                                    maxWidth: 300,
                                   ),
                                   child: Text(
                                     'Disarankan agar Pemberi Pinjaman yang tidak memiliki pengetahuan dan pengalaman dalam Pinjaman Fintech untuk tidak menggunakan layanan ini.',
                                     style: TextStyle(
+                                      decoration: TextDecoration.none,
                                       fontSize: 16,
                                       fontWeight: FontWeight.w500,
                                       height: 1.265,
@@ -251,6 +251,7 @@ class SyaratdanKetentuan extends StatelessWidget {
                                   child: Text(
                                     '5.',
                                     style: TextStyle(
+                                      decoration: TextDecoration.none,
                                       fontSize: 16,
                                       fontWeight: FontWeight.w500,
                                       height: 1.265,
@@ -261,11 +262,12 @@ class SyaratdanKetentuan extends StatelessWidget {
                                 Container(
                                   // penerimapinjamanharusmempertim (1:2019)
                                   constraints: BoxConstraints(
-                                    maxWidth: 327,
+                                    maxWidth: 300,
                                   ),
                                   child: Text(
                                     'Penerima Pinjaman harus mempertimbangkan bagi hasil dan biaya lainnya sesuai dengan kemampuan mereka dalam melunasi pinjaman sebelum menggunakan Fasilitas Pinjaman Fintech.',
                                     style: TextStyle(
+                                      decoration: TextDecoration.none,
                                       fontSize: 16,
                                       fontWeight: FontWeight.w500,
                                       height: 1.265,
@@ -300,6 +302,7 @@ class SyaratdanKetentuan extends StatelessWidget {
                                   child: Text(
                                     '6.',
                                     style: TextStyle(
+                                      decoration: TextDecoration.none,
                                       fontSize: 16,
                                       fontWeight: FontWeight.w500,
                                       height: 1.265,
@@ -310,11 +313,12 @@ class SyaratdanKetentuan extends StatelessWidget {
                                 Container(
                                   // setiapkecuranganakantercatatse (1:2022)
                                   constraints: BoxConstraints(
-                                    maxWidth: 322,
+                                    maxWidth: 300,
                                   ),
                                   child: Text(
                                     'Setiap kecurangan akan tercatat secara digital dan dapat diketahui oleh masyarakat melalui media sosial, serta dapat digunakan sebagai bukti hukum yang sah dalam penyelesaian sengketa dan penegakan hukum.',
                                     style: TextStyle(
+                                      decoration: TextDecoration.none,
                                       fontSize: 16,
                                       fontWeight: FontWeight.w500,
                                       height: 1.265,
@@ -349,6 +353,7 @@ class SyaratdanKetentuan extends StatelessWidget {
                                   child: Text(
                                     '7.',
                                     style: TextStyle(
+                                      decoration: TextDecoration.none,
                                       fontSize: 16,
                                       fontWeight: FontWeight.w500,
                                       height: 1.265,
@@ -359,11 +364,12 @@ class SyaratdanKetentuan extends StatelessWidget {
                                 Container(
                                   // penggunaharusmembacadanmemaham (1:2025)
                                   constraints: BoxConstraints(
-                                    maxWidth: 312,
+                                    maxWidth: 300,
                                   ),
                                   child: Text(
                                     'Pengguna harus membaca dan memahami informasi ini sebelum memutuskan untuk menjadi Pemberi Pinjaman atau Penerima Pinjaman. Penggunaan Fasilitas Pinjaman Fintech ini menunjukkan bahwa Pengguna telah memahami informasi ini.',
                                     style: TextStyle(
+                                      decoration: TextDecoration.none,
                                       fontSize: 16,
                                       fontWeight: FontWeight.w500,
                                       height: 1.265,
@@ -398,6 +404,7 @@ class SyaratdanKetentuan extends StatelessWidget {
                                   child: Text(
                                     '8.',
                                     style: TextStyle(
+                                      decoration: TextDecoration.none,
                                       fontSize: 16,
                                       fontWeight: FontWeight.w500,
                                       height: 1.265,
@@ -408,11 +415,12 @@ class SyaratdanKetentuan extends StatelessWidget {
                                 Container(
                                   // pemerintahdalamhaliniotoritasj (1:2028)
                                   constraints: BoxConstraints(
-                                    maxWidth: 319,
+                                    maxWidth: 300,
                                   ),
                                   child: Text(
                                     'Pemerintah, dalam hal ini Otoritas Jasa Keuangan, tidak bertanggung jawab atas pelanggaran atau ketidakpatuhan yang dilakukan oleh Pengguna, baik Pemberi Pinjaman maupun Penerima Pinjaman, terhadap peraturan perundang-undangan atau kesepakatan antara Penyelenggara dengan Pemberi Pinjaman dan/atau Penerima Pinjaman.',
                                     style: TextStyle(
+                                      decoration: TextDecoration.none,
                                       fontSize: 16,
                                       fontWeight: FontWeight.w500,
                                       height: 1.265,
@@ -447,6 +455,7 @@ class SyaratdanKetentuan extends StatelessWidget {
                                   child: Text(
                                     '9.',
                                     style: TextStyle(
+                                      decoration: TextDecoration.none,
                                       fontSize: 16,
                                       fontWeight: FontWeight.w500,
                                       height: 1.265,
@@ -457,11 +466,12 @@ class SyaratdanKetentuan extends StatelessWidget {
                                 Container(
                                   // setiaptransaksidankegiatanpemi (1:2031)
                                   constraints: BoxConstraints(
-                                    maxWidth: 322,
+                                    maxWidth: 300,
                                   ),
                                   child: Text(
                                     'Setiap transaksi dan kegiatan peminjaman atau pelaksanaan kesepakatan terkait peminjaman antara Penyelenggara, Pemberi Pinjaman, dan/atau Penerima Pinjaman harus menggunakan escrow account dan virtual account sesuai dengan peraturan yang ditetapkan oleh Otoritas Jasa Keuangan Nomor 77/POJK.01/2016 tentang Layanan Pinjam Meminjam Uang Berbasis Teknologi Informasi. Pelanggaran atau ketidakpatuhan terhadap ketentuan ini menunjukkan adanya pelanggaran hukum oleh Penyelenggara, yang berarti Penyelenggara harus bertanggung jawab atas ganti rugi yang diterima oleh masing-masing Pengguna sebagai konsekuensi langsung dari pelanggaran hukum tersebut. Hak-hak Pengguna yang mengalami kerugian tetap diatur oleh Kitab Undang-Undang Hukum Perdata.',
                                     style: TextStyle(
+                                      decoration: TextDecoration.none,
                                       fontSize: 16,
                                       fontWeight: FontWeight.w500,
                                       height: 1.265,
@@ -495,6 +505,7 @@ class SyaratdanKetentuan extends StatelessWidget {
                                   child: Text(
                                     '10.',
                                     style: TextStyle(
+                                      decoration: TextDecoration.none,
                                       fontSize: 16,
                                       fontWeight: FontWeight.w500,
                                       height: 1.265,
@@ -505,11 +516,12 @@ class SyaratdanKetentuan extends StatelessWidget {
                                 Container(
                                   // jikatidakdiatursecaraeksplisit (1:2035)
                                   constraints: BoxConstraints(
-                                    maxWidth: 320,
+                                    maxWidth: 300,
                                   ),
                                   child: Text(
                                     'Jika tidak diatur secara eksplisit, definisi-definisi yang disebutkan di atas mengacu pada definisi yang telah ditetapkan dalam Syarat dan Ketentuan Umum. Setiap Pengguna diharuskan membaca dan memahami Syarat dan Ketentuan serta Kebijakan Privasi Amartha.',
                                     style: TextStyle(
+                                      decoration: TextDecoration.none,
                                       fontSize: 16,
                                       fontWeight: FontWeight.w500,
                                       height: 1.265,
@@ -543,16 +555,16 @@ class SyaratdanKetentuan extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  // syaratdanketentuanycz (1:2075)
                   left: 95,
                   top: 105,
                   child: Align(
                     child: SizedBox(
-                      width: 238,
+                      // width: 238,
                       height: 32,
                       child: Text(
                         'Syarat dan Ketentuan',
                         style: TextStyle(
+                          decoration: TextDecoration.none,
                           fontSize: 20,
                           fontWeight: FontWeight.w800,
                           height: 1.3625,

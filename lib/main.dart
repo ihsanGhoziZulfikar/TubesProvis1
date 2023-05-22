@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login_page/Aktivitasscreen.dart';
+import 'package:login_page/KontakKami_Akun.dart';
 import 'package:login_page/Tarik-dana-investor.dart';
 import 'package:login_page/bayarpinjaman.dart';
 import 'package:login_page/dana1.dart';
@@ -42,6 +43,7 @@ class MyApp extends StatelessWidget {
         // body: dana1(),
         // body: dana2(),
         // body: bayarpinjaman(),
+        // body: Kontakkami(),
       ),
     );
   }

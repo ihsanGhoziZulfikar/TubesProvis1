@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'umkmDetailPage.dart';
+import 'package:login_page/umkmDetailPage.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class Umkm extends StatefulWidget {
@@ -147,132 +147,51 @@ class _UmkmState extends State<Umkm> {
               scrollDirection: Axis.horizontal,
               children: [
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 19.0),
-                  child: Stack(
-                    children: [
-                      Container(
-                        width: 360.0,
-                        decoration: BoxDecoration(
-                          color: Color(0xFFD6E4F0),
-                          borderRadius: BorderRadius.circular(20.0),
-                          image: const DecorationImage(
-                            image: NetworkImage(
-                                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6FeM9xyfXso3joBifp3uVxFPXuxwDR3UH9A&usqp=CAU'),
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        top: 0,
-                        left: 0,
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: Color(0xFFD6E4F0).withOpacity(0.65),
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(20.0),
-                              bottomRight: Radius.circular(20.0),
-                            ),
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(7.0),
-                            child: Text(
-                              '#Direkomendasikan',
-                              style: TextStyle(
-                                fontSize: 12,
-                                color: Color(0xFF1C355E),
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: Container(
+                    padding:
+                        EdgeInsets.only(left: 16.0, top: 10.0, bottom: 12.0),
+                    width: 100.0,
+                    decoration: BoxDecoration(
+                      color: Color(0xFFD6E4F0),
+                      borderRadius: BorderRadius.circular(15.0),
+                    ),
+                    child: Image.asset(
+                      '../assets/images/toko.jpg',
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 19.0),
-                  child: Stack(
-                    children: [
-                      Container(
-                        width: 360.0,
-                        decoration: BoxDecoration(
-                          color: Color(0xFFD6E4F0),
-                          borderRadius: BorderRadius.circular(20.0),
-                          image: const DecorationImage(
-                            image: NetworkImage(
-                                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8afHgEPok38cfY9T4En6bfnMzLBs5UMvSGw&usqp=CAU'),
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        top: 0,
-                        left: 0,
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: Color(0xFFD6E4F0).withOpacity(0.65),
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(20.0),
-                              bottomRight: Radius.circular(20.0),
-                            ),
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(7.0),
-                            child: Text(
-                              '#Direkomendasikan',
-                              style: TextStyle(
-                                fontSize: 12,
-                                color: Color(0xFF1C355E),
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: Container(
+                    padding:
+                        EdgeInsets.only(left: 16.0, top: 10.0, bottom: 12.0),
+                    width: 100.0,
+                    decoration: BoxDecoration(
+                      color: Color(0xFFD6E4F0),
+                      borderRadius: BorderRadius.circular(15.0),
+                    ),
+                    child: Image.asset(
+                      '../assets/images/toko.jpg',
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 19.0),
-                  child: Stack(
-                    children: [
-                      Container(
-                        width: 360.0,
-                        decoration: BoxDecoration(
-                          color: Color(0xFFD6E4F0),
-                          borderRadius: BorderRadius.circular(15.0),
-                          image: const DecorationImage(
-                            image: NetworkImage(
-                                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm8dv8EZACOiR-A-runswAA3cCXFljUFPglw&usqp=CAU'),
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        top: 0,
-                        left: 0,
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: Color(0xFFD6E4F0).withOpacity(0.65),
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(20.0),
-                              bottomRight: Radius.circular(20.0),
-                            ),
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(7.0),
-                            child: Text(
-                              '#Direkomendasikan',
-                              style: TextStyle(
-                                fontSize: 12,
-                                color: Color(0xFF1C355E),
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: Container(
+                    padding:
+                        EdgeInsets.only(left: 16.0, top: 10.0, bottom: 12.0),
+                    width: 100.0,
+                    decoration: BoxDecoration(
+                      color: Color(0xFFD6E4F0),
+                      borderRadius: BorderRadius.circular(15.0),
+                    ),
+                    child: Image.asset(
+                      '../assets/images/toko.jpg',
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
               ],
@@ -321,7 +240,7 @@ class _UmkmState extends State<Umkm> {
                     children: [
                       Container(
                         width: 165.0,
-                        height: 165.0,
+                        height: 150.0,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(20.0),
@@ -329,7 +248,7 @@ class _UmkmState extends State<Umkm> {
                           ),
                           image: const DecorationImage(
                             image: NetworkImage(
-                                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP_PWHlMmPa2A_tyVL3etll_SE2LAUSA8M9Q&usqp=CAU'),
+                                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM_FtZK4TZilSzN8leRpCWY9wWpaIpoR-sOA&usqp=CAU'),
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -381,7 +300,7 @@ class _UmkmState extends State<Umkm> {
                                 padding: EdgeInsets.symmetric(vertical: 0.8),
                                 child: Row(
                                   children: [
-                                    Text('Makanan'),
+                                    Text('Properti'),
                                   ],
                                 ),
                               ),

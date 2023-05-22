@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 // import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:login_page/Tarik-dana-investor.dart';
+import 'package:login_page/bayarpinjaman.dart';
+import 'package:login_page/tarikpinjaman.dart';
 
 class riwayatTransaksi {
   String date;
@@ -77,63 +80,89 @@ class dana2 extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Container(
-              padding: EdgeInsets.all(15),
-              // margin: EdgeInsets.only(left: 20, right: 20),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                color: Color.fromARGB(255, 2, 46, 122),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  Container(
-                    width: 100,
-                    margin: EdgeInsets.only(bottom: 30),
-                    child: Text(
-                      'Bayar\nPinjaman',
-                      style: GoogleFonts.inter(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w700,
-                        color: Colors.white,
+            GestureDetector(
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return Scaffold(
+                        body: bayarpinjaman(),
+                      );
+                    },
+                  ),
+                );
+              },
+              child: Container(
+                padding: EdgeInsets.all(15),
+                // margin: EdgeInsets.only(left: 20, right: 20),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  color: Color.fromARGB(255, 2, 46, 122),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Container(
+                      width: 100,
+                      margin: EdgeInsets.only(bottom: 30),
+                      child: Text(
+                        'Bayar\nPinjaman',
+                        style: GoogleFonts.inter(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w700,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
-                  ),
-                  Container(
-                    alignment: Alignment.bottomRight,
-                    child: Icon(Icons.credit_card_sharp, color: Colors.white),
-                  ),
-                ],
+                    Container(
+                      alignment: Alignment.bottomRight,
+                      child: Icon(Icons.credit_card_sharp, color: Colors.white),
+                    ),
+                  ],
+                ),
               ),
             ),
-            Container(
-              padding: EdgeInsets.all(15),
-              // margin: EdgeInsets.only(left: 20),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                color: Color.fromARGB(255, 2, 46, 122),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  Container(
-                    width: 100,
-                    margin: EdgeInsets.only(bottom: 30),
-                    child: Text(
-                      'Tarik\nPinjaman',
-                      style: GoogleFonts.inter(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w700,
-                        color: Colors.white,
+            GestureDetector(
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return Scaffold(
+                        body: TarikPinjaman(),
+                      );
+                    },
+                  ),
+                );
+              },
+              child: Container(
+                padding: EdgeInsets.all(15),
+                // margin: EdgeInsets.only(left: 20),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  color: Color.fromARGB(255, 2, 46, 122),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Container(
+                      width: 100,
+                      margin: EdgeInsets.only(bottom: 30),
+                      child: Text(
+                        'Tarik\nPinjaman',
+                        style: GoogleFonts.inter(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w700,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
-                  ),
-                  Container(
-                    alignment: Alignment.bottomRight,
-                    child:
-                        Icon(Icons.local_print_shop_sharp, color: Colors.white),
-                  ),
-                ],
+                    Container(
+                      alignment: Alignment.bottomRight,
+                      child: Icon(Icons.local_print_shop_sharp,
+                          color: Colors.white),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
@@ -183,7 +212,7 @@ class dana2 extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        '${data[index].date}\nInvestasi ${data[index].nama}\nRp ${data[index].jumlah},00',
+                        '${data[index].date}\nBayar ke investor ${data[index].nama}\nRp ${data[index].jumlah},00',
                         style: GoogleFonts.beVietnamPro(
                           fontWeight: FontWeight.bold,
                           color: Colors.black,
