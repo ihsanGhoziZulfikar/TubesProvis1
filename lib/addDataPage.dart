@@ -4,7 +4,6 @@ import 'package:login_page/navbar.dart';
 import 'home.dart';
 
 class AddDataPage extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return Container(

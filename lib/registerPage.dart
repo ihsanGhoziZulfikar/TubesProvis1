@@ -83,6 +83,9 @@ class RegisterPage extends StatelessWidget {
                     borderRadius: BorderRadius.all(Radius.circular(10)),
                   ),
                   child: TextField(
+                    obscureText: true,
+                    enableSuggestions: false,
+                    autocorrect: false,
                     decoration: InputDecoration(
                       contentPadding: EdgeInsets.symmetric(horizontal: 10),
                       border: InputBorder.none,
@@ -132,7 +135,6 @@ class RegisterPage extends StatelessWidget {
                               ],
                             ),
                             child: Align(
-                              // rectangle75gA (1:5179)
                               alignment: Alignment.topCenter,
                               child: SizedBox(
                                 width: 40,

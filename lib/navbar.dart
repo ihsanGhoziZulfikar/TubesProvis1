@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login_page/Aktivitasscreen.dart';
+import 'package:login_page/account.dart';
 import 'package:login_page/home.dart';
 import 'package:login_page/syaratdanketentuan_akun.dart';
 import 'package:login_page/umkm.dart';
@@ -25,7 +26,7 @@ class _NavbarState extends State<Navbar> {
     Umkm(title: 'title'),
     dana2(),
     AktivitasScreen(),
-    SyaratdanKetentuan(),
+    Account(),
   ];
 
   @override
@@ -34,7 +35,9 @@ class _NavbarState extends State<Navbar> {
       body: listWidget.elementAt(_currentIndex),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.black,
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.blue,
         onTap: _onTabTapped,
         items: [
           BottomNavigationBarItem(
@@ -51,7 +54,7 @@ class _NavbarState extends State<Navbar> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite),
-            label: 'Favorites',
+            label: 'Activity',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
