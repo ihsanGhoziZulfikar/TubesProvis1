@@ -26,7 +26,7 @@ class Funding_notificationDialogueState
       child: Column(
         children: [
           Text(
-            "Bayar Pinjaman",
+            "Pembayaran Pinjaman",
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
           ),
           SizedBox(

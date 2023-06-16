@@ -1,12 +1,180 @@
 import 'package:flutter/material.dart';
-import 'package:login_page/home.dart';
-import 'package:login_page/registerPage.dart';
-import 'package:login_page/rolePage.dart';
+import 'home.dart';
+import 'registerPage.dart';
+import 'rolePage.dart';
 
 import 'navbar.dart';
 import 'navbar2.dart';
 
-class LoginPage extends StatelessWidget {
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
+
+class PeminjamModel {
+  int id;
+  int id_umkm;
+  String nama;
+  String email;
+  String password;
+
+  PeminjamModel({
+    required this.id,
+    required this.id_umkm,
+    required this.nama,
+    required this.email,
+    required this.password,
+  });
+
+  factory PeminjamModel.fromJson(Map<String, dynamic> json) {
+    return PeminjamModel(
+      id: json['id'] ?? '',
+      id_umkm: json['id_umkm'] ?? '',
+      nama: json['nama'] ?? '',
+      email: json['email'] ?? '',
+      password: json['password'] ?? '',
+    );
+  }
+}
+
+class PeminjamCubit extends Cubit<PeminjamModel> {
+  PeminjamCubit()
+      : super(PeminjamModel(
+          id: 0,
+          id_umkm: 0,
+          nama: "",
+          email: "",
+          password: "",
+        ));
+
+  Future<PeminjamModel?> fetchData(email, password) async {
+    try {
+      if (email == "" || password == "") {
+        return null;
+      }
+      String url = "http://127.0.0.1:8000/peminjam/$email/$password";
+      final response = await http.get(Uri.parse(url));
+      print("hjksdhajkhj jkl");
+      if (response.statusCode == 200) {
+        final jsonData = jsonDecode(response.body);
+        if (jsonData.containsKey("data")) {
+          final data = jsonData['data'] as Map<String, dynamic>;
+          final peminjamModel = PeminjamModel.fromJson(data);
+          return peminjamModel;
+        } else {
+          return null;
+        }
+      } else {
+        throw Exception('Failed to load data');
+      }
+    } catch (e) {
+      print(e);
+      throw Exception('Failed to load data: $e');
+    }
+  }
+}
+
+class InvestorModel {
+  int id;
+  String nama;
+  String email;
+  String password;
+
+  InvestorModel({
+    required this.id,
+    required this.nama,
+    required this.email,
+    required this.password,
+  });
+
+  factory InvestorModel.fromJson(Map<String, dynamic> json) {
+    return InvestorModel(
+      id: json['id'] ?? '',
+      nama: json['nama'] ?? '',
+      email: json['email'] ?? '',
+      password: json['password'] ?? '',
+    );
+  }
+}
+
+class InvestorCubit extends Cubit<InvestorModel> {
+  InvestorCubit()
+      : super(InvestorModel(
+          id: 0,
+          nama: "",
+          email: "",
+          password: "",
+        ));
+
+  Future<InvestorModel?> fetchData2(email, password) async {
+    try {
+      if (email == "" || password == "") {
+        return null;
+      }
+      print("hjksdhajkhj jkl 1");
+      String url = "http://127.0.0.1:8000/investor/$email/$password";
+      final response = await http.get(Uri.parse(url));
+      print("hjksdhajkhj jkl 2");
+      if (response.statusCode == 200) {
+        final jsonData = jsonDecode(response.body);
+        if (jsonData.containsKey("data")) {
+          final data = jsonData['data'] as Map<String, dynamic>;
+          final peminjamModel = InvestorModel.fromJson(data);
+          return peminjamModel;
+        } else {
+          return null;
+        }
+      } else {
+        throw Exception('Failed to load data');
+      }
+    } catch (e) {
+      print(e);
+      throw Exception('Failed to load data: $e');
+    }
+  }
+}
+
+class aktivitasUmkm {
+  String date;
+  String jenis;
+  String time;
+  String logo;
+  aktivitasUmkm({
+    required this.date,
+    required this.jenis,
+    required this.time,
+    required this.logo,
+  });
+}
+
+class LoginPage extends StatefulWidget {
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  final peminjamCubit = PeminjamCubit();
+  final investorCubit = InvestorCubit();
+
+  var emailController = TextEditingController();
+  var passController = TextEditingController();
+  String _email = "-";
+  String _pass = "-";
+
+  @override
+  void initState() {
+    super.initState();
+    emailController = TextEditingController();
+    passController = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    // Clean up the controller when the widget is disposed.
+    emailController.dispose();
+    passController.dispose();
+    super.dispose();
+  }
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -20,7 +188,7 @@ class LoginPage extends StatelessWidget {
                   Container(
                     padding: EdgeInsets.all(30),
                     child: Image.asset(
-                      '../assets/images/logo.png',
+                      'assets/images/logo.png',
                       width: 100,
                       height: 100,
                     ),
@@ -61,6 +229,7 @@ class LoginPage extends StatelessWidget {
                             borderRadius: BorderRadius.all(Radius.circular(10)),
                           ),
                           child: TextField(
+                            controller: emailController,
                             decoration: InputDecoration(
                               contentPadding:
                                   EdgeInsets.symmetric(horizontal: 10),
@@ -77,6 +246,7 @@ class LoginPage extends StatelessWidget {
                             borderRadius: BorderRadius.all(Radius.circular(10)),
                           ),
                           child: TextField(
+                            controller: passController,
                             decoration: InputDecoration(
                               contentPadding:
                                   EdgeInsets.symmetric(horizontal: 10),
@@ -101,14 +271,40 @@ class LoginPage extends StatelessWidget {
                           height: 50,
                         ),
                         GestureDetector(
-                          onTap: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (context) {
-                                  return Navbar();
-                                },
-                              ),
-                            );
+                          onTap: () async {
+                            setState(() {
+                              _email = emailController
+                                  .text; //akses text via controller
+                              _pass = passController.text;
+                            }); //refresh
+                            var peminjam =
+                                await peminjamCubit.fetchData(_email, _pass);
+                            if (peminjam != null) {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return Navbar2(
+                                      id: peminjam.id,
+                                      id_umkm: peminjam.id_umkm,
+                                    );
+                                  },
+                                ),
+                              );
+                            } else {
+                              var investor =
+                                  await investorCubit.fetchData2(_email, _pass);
+                              if (investor != null) {
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      return Navbar(id: investor.id);
+                                    },
+                                  ),
+                                );
+                              }
+                            }
+                            // postUmkm(widget.id, _nama, _email, _tahun,
+                            //     _password, pilihanKategori as String);
                           },
                           child: Container(
                             width: double.infinity,

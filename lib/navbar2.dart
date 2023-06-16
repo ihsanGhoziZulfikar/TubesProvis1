@@ -1,18 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:login_page/Aktivitasscreen.dart';
-import 'package:login_page/account.dart';
-import 'package:login_page/changePassPage.dart';
-import 'package:login_page/dana3.dart';
-import 'package:login_page/home.dart';
-import 'package:login_page/myUmkmPage.dart';
-import 'package:login_page/syaratdanketentuan_akun.dart';
-import 'package:login_page/umkm.dart';
-import 'package:login_page/umkmVisitorPage.dart';
+import 'activityInvestor.dart';
+import 'account.dart';
+import 'changePassPage.dart';
+import 'dana3.dart';
+import 'home.dart';
+import 'myUmkmPage.dart';
+import 'syaratdanketentuan_akun.dart';
+import 'umkm.dart';
+import 'umkmVisitorPage.dart';
 
 import 'dana2.dart';
 import 'homeUmkm.dart';
 
 class Navbar2 extends StatefulWidget {
+  final int id;
+  final int id_umkm;
+
+  const Navbar2({
+    Key? key,
+    required this.id,
+    required this.id_umkm,
+  }) : super(key: key);
+
   @override
   _Navbar2State createState() => _Navbar2State();
 }
@@ -26,15 +35,24 @@ class _Navbar2State extends State<Navbar2> {
     });
   }
 
-  List<Widget> listWidget = [
-    HomeUmkm(
-      60.0,
-      d: 'null',
-      title: 'umkm',
-    ),
-    dana2(),
-    Account(),
-  ];
+  List<Widget> listWidget = [];
+
+  @override
+  void initState() {
+    super.initState();
+
+    listWidget = [
+      HomeUmkm(
+        widget
+            .id_umkm, // Access the id_umkm from the widget using widget.id_umkm
+        60.0,
+        d: 'null',
+        title: 'umkm',
+      ),
+      dana2(),
+      Account(id: 1),
+    ];
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -42,22 +60,22 @@ class _Navbar2State extends State<Navbar2> {
       body: listWidget.elementAt(_currentIndex),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
-        backgroundColor: Colors.black,
-        selectedItemColor: Colors.black,
-        unselectedItemColor: Colors.blue,
+        backgroundColor: _currentIndex == 1 ? Color(0xFFD6E4F0) : Colors.white,
+        selectedItemColor: Color(0xFF669AD9),
+        unselectedItemColor: Color(0xFF1C355E),
         onTap: _onTabTapped,
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Home',
+            label: 'Beranda',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.money),
+            icon: Icon(Icons.monetization_on_rounded),
             label: 'Dana',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            label: 'account',
+            label: 'Akun',
           ),
         ],
       ),

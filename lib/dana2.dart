@@ -1,25 +1,89 @@
+import 'package:android/paymentNotification.dart';
+import 'package:android/riwayatTransaksiUmkm.dart';
+import 'package:android/topupNotification.dart';
+import 'package:android/withdrawalNotification.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 // import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:login_page/Tarik-dana-investor.dart';
-import 'package:login_page/bayarpinjaman.dart';
-import 'package:login_page/tarikpinjaman.dart';
+import 'Tarik-dana-investor.dart';
+import 'bayarpinjaman.dart';
+import 'tarikpinjaman.dart';
 
 class riwayatTransaksi {
   String date;
-  String nama;
+  String jenis;
   int jumlah;
+  String status;
+  String warna;
   riwayatTransaksi(
-      {required this.date, required this.nama, required this.jumlah});
+      {required this.date,
+      required this.jenis,
+      required this.jumlah,
+      required this.status,
+      required this.warna});
+}
+
+getPage(String jenis) {
+  switch (jenis) {
+    case 'Tarik Dana':
+      return WithdrawalNotificationDialogue();
+    case 'Isi Saldo Dana':
+      return TopupNotificationDialogue();
+    case 'Bayar Pinjaman':
+      return PaymentNotificationDialogue();
+  }
 }
 
 List<riwayatTransaksi> data = [
-  riwayatTransaksi(date: "20/05/2023", nama: "Mia", jumlah: 100000),
-  riwayatTransaksi(date: "20/05/2023", nama: "Mia", jumlah: 100000),
-  riwayatTransaksi(date: "20/05/2023", nama: "Mia", jumlah: 100000),
-  riwayatTransaksi(date: "20/05/2023", nama: "Mia", jumlah: 100000),
-  riwayatTransaksi(date: "20/05/2023", nama: "Mia", jumlah: 100000),
+  riwayatTransaksi(
+      date: "20/05/2023",
+      jenis: "Bayar Pinjaman",
+      jumlah: 100000,
+      status: "Belum Lunas",
+      warna: "merah"),
+  riwayatTransaksi(
+      date: "20/05/2023",
+      jenis: "Bayar Pinjaman",
+      jumlah: 100000,
+      status: "Belum Lunas",
+      warna: "merah"),
+  riwayatTransaksi(
+      date: "20/05/2023",
+      jenis: "Bayar Pinjaman",
+      jumlah: 100000,
+      status: "Lunas",
+      warna: "green"),
+  riwayatTransaksi(
+      date: "20/05/2023",
+      jenis: "Isi Saldo Dana",
+      jumlah: 100000,
+      status: "",
+      warna: "white"),
+  riwayatTransaksi(
+      date: "20/05/2023",
+      jenis: "Isi Saldo Dana",
+      jumlah: 100000,
+      status: "",
+      warna: "white"),
+  riwayatTransaksi(
+      date: "20/05/2023",
+      jenis: "Isi Saldo Dana",
+      jumlah: 100000,
+      status: "",
+      warna: "white"),
+  riwayatTransaksi(
+      date: "20/05/2023",
+      jenis: "Tarik Dana",
+      jumlah: 100000,
+      status: "",
+      warna: "white"),
+  riwayatTransaksi(
+      date: "20/05/2023",
+      jenis: "Tarik Dana",
+      jumlah: 100000,
+      status: "",
+      warna: "white"),
 ];
 
 class dana2 extends StatelessWidget {
@@ -31,12 +95,13 @@ class dana2 extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              margin: EdgeInsets.only(bottom: 30, left: 10),
+              margin: EdgeInsets.fromLTRB(14, 0, 0, 45),
               alignment: Alignment.topLeft,
               child: Text(
                 'Dana',
                 style: GoogleFonts.beVietnamPro(
-                  fontSize: 20,
+                  height: 2,
+                  fontSize: 24,
                   fontWeight: FontWeight.w400,
                   color: Colors.black,
                 ),
@@ -58,24 +123,26 @@ class dana2 extends StatelessWidget {
                     ),
                   ),
                   Container(
-                      margin: EdgeInsets.only(bottom: 20, left: 40),
-                      child: Text(
-                        "Rp 4.000.000,00",
-                        style: GoogleFonts.inter(
-                            color: Colors.black,
-                            fontSize: 30,
-                            fontWeight: FontWeight.w600),
-                      )),
-                  Container(
-                      margin: EdgeInsets.only(bottom: 30, left: 40),
-                      child: Text(
-                        'Kontrol keuanganmu dalam genggaman.\nLihat saldo peminjamanmu dan histori\ntransaksi dengan mudah di sini!',
-                        style: GoogleFonts.beVietnamPro(
-                          fontSize: 14,
-                          fontWeight: FontWeight.normal,
+                    margin: EdgeInsets.only(bottom: 25, left: 40),
+                    child: Text(
+                      "Rp 4.000.000,-",
+                      style: GoogleFonts.inter(
                           color: Colors.black,
-                        ),
-                      )),
+                          fontSize: 35,
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(bottom: 40, left: 40),
+                    child: Text(
+                      'Kontrol keuanganmu dalam genggaman.\nLihat saldo peminjamanmu dan histori\ntransaksi dengan mudah di sini!',
+                      style: GoogleFonts.beVietnamPro(
+                        fontSize: 12,
+                        fontWeight: FontWeight.normal,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -94,10 +161,9 @@ class dana2 extends StatelessWidget {
                   },
                   child: Container(
                     padding: EdgeInsets.all(15),
-                    // margin: EdgeInsets.only(left: 20, right: 20),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
-                      color: Color.fromARGB(255, 2, 46, 122),
+                      color: Color(0xFF1C355E),
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.end,
@@ -106,7 +172,7 @@ class dana2 extends StatelessWidget {
                           width: 100,
                           margin: EdgeInsets.only(bottom: 30),
                           child: Text(
-                            'Top Up\nSaldo',
+                            'Isi Saldo\nDana',
                             style: GoogleFonts.inter(
                               fontSize: 14,
                               fontWeight: FontWeight.w700,
@@ -135,10 +201,9 @@ class dana2 extends StatelessWidget {
                   },
                   child: Container(
                     padding: EdgeInsets.all(15),
-                    // margin: EdgeInsets.only(left: 20),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
-                      color: Color.fromARGB(255, 2, 46, 122),
+                      color: Color(0xFF1C355E),
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.end,
@@ -147,7 +212,7 @@ class dana2 extends StatelessWidget {
                           width: 100,
                           margin: EdgeInsets.only(bottom: 30),
                           child: Text(
-                            'Tarik\nPinjaman',
+                            'Tarik\nDana',
                             style: GoogleFonts.inter(
                               fontSize: 14,
                               fontWeight: FontWeight.w700,
@@ -166,30 +231,48 @@ class dana2 extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 50),
             Row(
               children: [
                 Expanded(
                   child: Container(
-                      margin: EdgeInsets.only(left: 40, right: 40),
-                      decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 208, 223, 250),
-                          borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(12),
-                              topRight: Radius.circular(12))),
-                      padding: EdgeInsets.all(14),
-                      child: Row(children: [
+                    decoration: BoxDecoration(
+                        color: Color(0xFFD6E4F0),
+                        borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(40),
+                            topRight: Radius.circular(40))),
+                    padding: EdgeInsets.only(
+                        left: 25, right: 25, top: 25, bottom: 12),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
                         Text(
                           'Riwayat Transaksi',
                           style: GoogleFonts.beVietnamPro(
+                            fontSize: 20,
                             fontWeight: FontWeight.bold,
                             color: Colors.black,
                           ),
                         ),
-                        Container(
-                          child: Icon(Icons.keyboard_arrow_right),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 5.0),
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return RiwayatTransaksiUmkm();
+                                  },
+                                ),
+                              );
+                            },
+                            child: Icon(Icons.arrow_forward_ios_rounded,
+                                color: Colors.black, size: 20),
+                          ),
                         ),
-                      ])),
+                      ],
+                    ),
+                  ),
                 ),
               ],
             ),
@@ -200,30 +283,84 @@ class dana2 extends StatelessWidget {
                 itemCount: data.length,
                 itemBuilder: (context, int index) {
                   return Container(
-                      margin: EdgeInsets.only(left: 40, right: 40),
-                      decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 208, 223, 250),
-                        // borderRadius: BorderRadius.circular(12)),
-                      ),
-                      padding: EdgeInsets.all(14),
-                      // margin: EdgeInsets.only(bottom: 10),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            '${data[index].date}\nBayar ke investor ${data[index].nama}\nRp ${data[index].jumlah},00',
-                            style: GoogleFonts.beVietnamPro(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black,
+                    decoration: BoxDecoration(
+                      color: Color(0xFFD6E4F0),
+                    ),
+                    padding: EdgeInsets.symmetric(horizontal: 25, vertical: 6),
+                    child: GestureDetector(
+                      onTap: () => showDialog<String>(
+                        context: context,
+                        builder: (BuildContext context) => Dialog(
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                const SizedBox(height: 15),
+                                getPage(data[index].jenis),
+                                const SizedBox(height: 15),
+                              ],
                             ),
                           ),
-                          Container(
-                            margin: EdgeInsets.only(left: 40),
-                            alignment: Alignment.centerRight,
-                            child: Icon(Icons.keyboard_arrow_right),
-                          )
-                        ],
-                      ));
+                        ),
+                      ),
+                      child: Container(
+                        padding: EdgeInsets.all(11),
+                        height: 60,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Column(
+                              children: [
+                                Text(
+                                  '${data[index].jenis}',
+                                  style: GoogleFonts.beVietnamPro(
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                SizedBox(height: 5),
+                                Text(
+                                  'Rp${data[index].jumlah},-',
+                                  style: GoogleFonts.beVietnamPro(
+                                    fontSize: 13,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Column(
+                              children: [
+                                Text(
+                                  data[index].date,
+                                  style: GoogleFonts.beVietnamPro(
+                                    fontSize: 11,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                SizedBox(height: 5),
+                                Text(
+                                  '${data[index].status}',
+                                  style: GoogleFonts.beVietnamPro(
+                                    fontSize: 11,
+                                    color: '${data[index].warna}' == 'merah'
+                                        ? Color.fromARGB(255, 255, 17, 0)
+                                        : Color.fromARGB(255, 6, 232, 14),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  );
                 },
               ),
             ),

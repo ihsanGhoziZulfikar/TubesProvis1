@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:login_page/home.dart';
-import 'package:login_page/registerPage.dart';
-import 'package:login_page/rolePage.dart';
+import 'home.dart';
+import 'registerPage.dart';
+import 'rolePage.dart';
 
 import 'navbar.dart';
 
@@ -18,7 +18,7 @@ class changePassPage extends StatelessWidget {
               child: Column(
                 children: [
                   SizedBox(
-                    height: 50,
+                    height: 40,
                   ),
                   Text(
                     "Ubah Kata Sandi",

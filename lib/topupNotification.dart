@@ -18,7 +18,7 @@ class Funding_notificationDialogueState
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 400,
+      height: 421,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(20),
@@ -26,7 +26,7 @@ class Funding_notificationDialogueState
       child: Column(
         children: [
           Text(
-            "Top Up Saldo",
+            "Pengisian Saldo Dana",
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
           ),
           SizedBox(
@@ -65,7 +65,7 @@ class Funding_notificationDialogueState
                 RichText(
                   text: TextSpan(
                     text:
-                        'Anda telah melakukan Top Up Saldo Dengan keterangan sebagai berikut :',
+                        'Anda telah melakukan Pengisian Saldo dengan keterangan sebagai berikut :',
                     style: TextStyle(
                       height: 1.5,
                       fontSize: 14,

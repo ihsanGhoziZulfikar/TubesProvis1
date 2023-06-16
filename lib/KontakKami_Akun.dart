@@ -6,7 +6,6 @@ class Kontakkami extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          // wireframeakunqyx (1:578)
           height: 852,
           decoration: BoxDecoration(
             border: Border.all(color: Color(0xffffffff)),
@@ -15,53 +14,23 @@ class Kontakkami extends StatelessWidget {
           child: Stack(
             children: [
               Container(
-                width: 393,
-                height: 70,
-                child: Stack(
-                  children: [
-                    Container(
-                      padding: EdgeInsets.fromLTRB(16, 8, 24, 5),
-                      width: 393,
-                      height: 56,
-                      decoration: BoxDecoration(
-                        color: Color(0xffffffff),
-                      ),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(
-                            // group54x4v (1:588)
-                            margin: EdgeInsets.fromLTRB(0, 3, 51, 0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                padding: EdgeInsets.fromLTRB(16, 78, 21, 44),
+                padding: EdgeInsets.fromLTRB(20, 40, 21, 44),
                 width: 393,
                 height: 782,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Container(
-                      // group113aZU (1:638)
-                      margin: EdgeInsets.fromLTRB(4, 0, 0, 22),
+                      margin: EdgeInsets.fromLTRB(4, 0, 0, 40),
                       width: 146,
                       height: 92,
                       child: Image.asset(
-                        '../assets/images/logo.png',
+                        'assets/images/logo.png',
                         width: 146,
                         height: 92,
                       ),
                     ),
                     Container(
-                      // group188Hin (1:617)
                       margin: EdgeInsets.fromLTRB(0, 0, 0, 45),
                       padding: EdgeInsets.fromLTRB(22, 22, 22, 22),
                       width: double.infinity,
@@ -71,14 +40,13 @@ class Kontakkami extends StatelessWidget {
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: Center(
-                        // adalahloremipsumdolorsitametco (1:622)
                         child: SizedBox(
                           child: Container(
                             constraints: BoxConstraints(
                               maxWidth: 312,
                             ),
                             child: Text(
-                              'BizAid adalah suatu aplikasi p2p lending yang bertujuan untuk membantu para pedagan umkm untuk mendapatkan modal agar bisa terus berjualan serta BizAid juga menyediakan sistem investasi bagi pada investor',
+                              'BizAid adalah suatu aplikasi p2p lending yang bertujuan untuk membantu para pelaku usaha umkm untuk mendapatkan modal agar dapat terus membangun usahanya, serta BizAid juga menyediakan sistem investasi bagi para investor.',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 decoration: TextDecoration.none,
@@ -93,7 +61,6 @@ class Kontakkami extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      // autogroupbgnaViN (RcwBo7TF3onEqLn9Bkbgna)
                       margin: EdgeInsets.fromLTRB(0, 0, 78, 14),
                       width: 254,
                       height: 80,
@@ -119,7 +86,6 @@ class Kontakkami extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      // group187qZG (1:627)
                       margin: EdgeInsets.fromLTRB(4, 0, 0, 0),
                       width: 352,
                       decoration: BoxDecoration(
@@ -129,7 +95,6 @@ class Kontakkami extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Container(
-                            // group184kw8 (1:628)
                             padding: EdgeInsets.fromLTRB(18, 17, 18, 17),
                             width: double.infinity,
                             decoration: BoxDecoration(
@@ -151,7 +116,6 @@ class Kontakkami extends StatelessWidget {
                             height: 15,
                           ),
                           Container(
-                            // group185dk2 (1:631)
                             padding: EdgeInsets.fromLTRB(17, 16, 17, 18),
                             width: double.infinity,
                             decoration: BoxDecoration(
@@ -173,7 +137,6 @@ class Kontakkami extends StatelessWidget {
                             height: 15,
                           ),
                           Container(
-                            // group1867fC (1:634)
                             padding: EdgeInsets.fromLTRB(18, 16, 18, 18),
                             width: double.infinity,
                             decoration: BoxDecoration(

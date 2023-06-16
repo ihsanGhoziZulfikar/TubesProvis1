@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:login_page/ratingDialogue.dart';
+import 'ratingDialogue.dart';
 import 'filterUmkmDialogue.dart';
 import 'umkmDetailPage.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -82,7 +82,7 @@ class _UmkmVisitorPageState extends State<UmkmVisitorPage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
-                      width: 315.0,
+                      width: 310.0,
                       decoration: BoxDecoration(
                         color: Color(0xFFD6E4F0),
                         borderRadius: BorderRadius.circular(30.0),

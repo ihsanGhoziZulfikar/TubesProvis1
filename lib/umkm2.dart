@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:login_page/umkmDetailPage.dart';
+import 'umkmDetailPage.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class Umkm extends StatefulWidget {
@@ -159,7 +159,7 @@ class _UmkmState extends State<Umkm> {
                           borderRadius: BorderRadius.circular(15.0),
                         ),
                         child: Image.asset(
-                          '../assets/images/toko.jpg',
+                          'assets/images/toko.jpg',
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -175,7 +175,7 @@ class _UmkmState extends State<Umkm> {
                           borderRadius: BorderRadius.circular(15.0),
                         ),
                         child: Image.asset(
-                          '../assets/images/toko.jpg',
+                          'assets/images/toko.jpg',
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -191,7 +191,7 @@ class _UmkmState extends State<Umkm> {
                           borderRadius: BorderRadius.circular(15.0),
                         ),
                         child: Image.asset(
-                          '../assets/images/toko.jpg',
+                          'assets/images/toko.jpg',
                           fit: BoxFit.cover,
                         ),
                       ),

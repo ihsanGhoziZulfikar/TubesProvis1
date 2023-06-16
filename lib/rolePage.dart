@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:login_page/registerPage.dart';
+import 'registerPage.dart';
 
 class RolePage extends StatelessWidget {
   // This widget is the root of your application.
@@ -21,7 +21,7 @@ class RolePage extends StatelessWidget {
                   decoration: BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage(
-                          '../assets/images/flag.png'), // Provide the correct image path
+                          'assets/images/flag.png'), // Provide the correct image path
                       fit: BoxFit.fill, // Use BoxFit.fill to stretch the image
                     ),
                   ),
@@ -33,7 +33,7 @@ class RolePage extends StatelessWidget {
                     Container(
                       padding: EdgeInsets.all(50),
                       child: Image.asset(
-                        '../assets/images/logo.png',
+                        'assets/images/logo.png',
                         width: 100,
                         height: 100,
                       ),
@@ -69,7 +69,7 @@ class RolePage extends StatelessWidget {
                                   margin: EdgeInsets.symmetric(horizontal: 10),
                                   child: Image.asset(
                                     width: 50,
-                                    '../assets/images/icon-profile.png',
+                                    'assets/images/icon-profile.png',
                                   ),
                                 ),
                                 Flexible(
@@ -105,7 +105,7 @@ class RolePage extends StatelessWidget {
                                   margin: EdgeInsets.symmetric(horizontal: 10),
                                   child: Image.asset(
                                     width: 15,
-                                    '../assets/images/icon-arrow.png',
+                                    'assets/images/icon-arrow.png',
                                   ),
                                 ),
                               ],
@@ -138,7 +138,7 @@ class RolePage extends StatelessWidget {
                                   margin: EdgeInsets.symmetric(horizontal: 10),
                                   child: Image.asset(
                                     width: 50,
-                                    '../assets/images/icon-profile.png',
+                                    'assets/images/icon-profile.png',
                                   ),
                                 ),
                                 Flexible(
@@ -174,7 +174,7 @@ class RolePage extends StatelessWidget {
                                   margin: EdgeInsets.symmetric(horizontal: 10),
                                   child: Image.asset(
                                     width: 15,
-                                    '../assets/images/icon-arrow.png',
+                                    'assets/images/icon-arrow.png',
                                   ),
                                 ),
                               ],

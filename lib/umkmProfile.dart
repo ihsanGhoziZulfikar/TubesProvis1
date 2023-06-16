@@ -1,15 +1,26 @@
+import 'package:android/ratingDialogue.dart';
+import 'package:android/ulasan.dart';
+import 'package:android/ulasanUmkm.dart';
 import 'package:flutter/material.dart';
-import 'package:login_page/ratingDialogue.dart';
-import 'package:login_page/ulasan.dart';
 
-class UmkmProfile extends StatefulWidget {
-  const UmkmProfile({super.key});
+class UmkmProfile extends StatelessWidget {
+  final int id;
+  final String img;
+  final String nama;
+  final String jenis;
+  final String alamat;
+  final String deskripsi;
 
-  @override
-  State<UmkmProfile> createState() => _UmkmProfileState();
-}
+  const UmkmProfile({
+    super.key,
+    required this.id,
+    required this.img,
+    required this.nama,
+    required this.alamat,
+    required this.deskripsi,
+    required this.jenis,
+  });
 
-class _UmkmProfileState extends State<UmkmProfile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,10 +30,9 @@ class _UmkmProfileState extends State<UmkmProfile> {
           width: MediaQuery.of(context).size.width,
           child: Column(
             children: [
-              // Icon(Icons.arrow_back, size: 24, color: Colors.black),
-              // SizedBox(width: 35.0),
+              SizedBox(height: 30),
               Text(
-                "Profil Usaha Mitra UMKM",
+                "Profil Usaha Mitra UMKM $id aa",
                 style: TextStyle(
                     fontSize: 20,
                     color: Color(0xFF1C355E),
@@ -41,13 +51,13 @@ class _UmkmProfileState extends State<UmkmProfile> {
                   children: [
                     CircleAvatar(
                       backgroundImage: NetworkImage(
-                        'https://cdn-icons-png.flaticon.com/512/4086/4086679.png',
+                        img,
                       ),
                       radius: 70,
                     ),
                     SizedBox(height: 20),
                     Text(
-                      "Roberto Ihsan Lautaro",
+                      nama,
                       style: TextStyle(
                         fontSize: 18,
                         color: Color(0xFF1C355E),
@@ -69,7 +79,7 @@ class _UmkmProfileState extends State<UmkmProfile> {
                         children: [
                           Icon(Icons.location_on, size: 14, color: Colors.red),
                           Text(
-                            "Pasir Biru, Cicilan, Di Jawa Barat",
+                            alamat,
                             style: TextStyle(
                               fontSize: 11,
                               color: Colors.black,
@@ -121,8 +131,9 @@ class _UmkmProfileState extends State<UmkmProfile> {
                               child: RichText(
                                 textAlign: TextAlign.justify,
                                 text: TextSpan(
-                                  text:
-                                      "Roberto Ihsan Lautaro merupakan Pemilik Usaha UMKM yang bergerak di bidang perdagangan, menjual berbagai macam jenis Kue Nastar.",
+                                  text: deskripsi,
+                                  // text:
+                                  //     "Roberto Ihsan Lautaro merupakan Pemilik Usaha UMKM yang bergerak di bidang perdagangan, menjual berbagai macam jenis Kue Nastar.",
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 12),
                                 ),
@@ -263,50 +274,72 @@ class _UmkmProfileState extends State<UmkmProfile> {
                         ],
                       ),
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (context) {
-                                  return Ulasan();
-                                },
-                              ),
-                            );
+                  ],
+                ),
+              ),
+              SizedBox(height: 25),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return UlasanUmkm();
                           },
-                          child: Row(
-                            children: [
-                              Text('ulasan'),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                      width: 70,
+                      height: 40,
+                      decoration: BoxDecoration(
+                        color: Color(0xFF1C355E),
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      child: Text(
+                        'Ulasan',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () => showDialog<String>(
+                      context: context,
+                      builder: (BuildContext context) => Dialog(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              const SizedBox(height: 15),
+                              RatingDialogue(),
+                              const SizedBox(height: 15),
                             ],
                           ),
                         ),
-                        TextButton(
-                          onPressed: () => showDialog<String>(
-                            context: context,
-                            builder: (BuildContext context) => Dialog(
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: <Widget>[
-                                    const SizedBox(height: 15),
-                                    RatingDialogue(),
-                                    const SizedBox(height: 15),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                          child: const Text('Tambah Ulasan'),
-                        ),
-                      ],
+                      ),
                     ),
-                  ],
-                ),
-              )
+                    child: Container(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                        width: 125,
+                        height: 40,
+                        decoration: BoxDecoration(
+                          color: Color(0xFF1C355E),
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        child: const Text(
+                          'Tambah Ulasan',
+                          style: TextStyle(color: Colors.white),
+                        )),
+                  ),
+                ],
+              ),
             ],
           ),
         ),

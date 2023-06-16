@@ -11,7 +11,7 @@ class SyaratdanKetentuan extends StatelessWidget {
               width: double.infinity,
               child: Container(
                 width: double.infinity,
-                height: 2598,
+                height: 2470,
                 decoration: BoxDecoration(
                   border: Border.all(color: Color(0xffffffff)),
                   borderRadius: BorderRadius.circular(20),
@@ -20,9 +20,9 @@ class SyaratdanKetentuan extends StatelessWidget {
                   children: [
                     Positioned(
                       left: 0,
-                      top: 176,
+                      top: 100,
                       child: Container(
-                        padding: EdgeInsets.fromLTRB(13, 23, 24, 17),
+                        padding: EdgeInsets.fromLTRB(13, 23, 33, 17),
                         width: 410,
                         height: 2341,
                         decoration: BoxDecoration(
@@ -549,8 +549,8 @@ class SyaratdanKetentuan extends StatelessWidget {
                     ),
                     Positioned(
                       // rectangle107Gia (1:2074)
-                      left: 58,
-                      top: 99,
+                      left: 55,
+                      top: 30,
                       child: Align(
                         child: SizedBox(
                           width: 277,
@@ -565,12 +565,10 @@ class SyaratdanKetentuan extends StatelessWidget {
                       ),
                     ),
                     Positioned(
-                      left: 95,
-                      top: 105,
+                      left: 100,
+                      top: 40,
                       child: Align(
                         child: SizedBox(
-                          // width: 238,
-                          height: 32,
                           child: Text(
                             'Syarat dan Ketentuan',
                             style: TextStyle(

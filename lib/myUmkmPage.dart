@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:login_page/changePassPage.dart';
-import 'package:login_page/home.dart';
-import 'package:login_page/pengajuanpinjaman.dart';
-import 'package:login_page/registerPage.dart';
-import 'package:login_page/rolePage.dart';
-import 'package:login_page/ubahdata_umkm.dart';
+import 'changePassPage.dart';
+import 'home.dart';
+import 'pengajuanpinjaman.dart';
+import 'registerPage.dart';
+import 'rolePage.dart';
+import 'ubahdata_umkm.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import 'konfirmasi.dart';
@@ -12,6 +12,24 @@ import 'navbar.dart';
 import 'ratingDialogue.dart';
 
 class MyUmkmPage extends StatelessWidget {
+  final int id;
+  final String img;
+  final String nama;
+  final String jenis;
+  final int tahun;
+  final String alamat;
+  final String deskripsi;
+
+  MyUmkmPage({
+    super.key,
+    required this.id,
+    required this.img,
+    required this.nama,
+    required this.tahun,
+    required this.alamat,
+    required this.deskripsi,
+    required this.jenis,
+  });
   final pageController = PageController();
   // This widget is the root of your application.
   @override
@@ -23,15 +41,11 @@ class MyUmkmPage extends StatelessWidget {
             child: Container(
               child: Column(
                 children: [
-                  SizedBox(
-                    height: 50,
-                  ),
                   Text(
                     "UMKM Saya",
                     style: TextStyle(
                       fontSize: 25,
                       fontWeight: FontWeight.w800,
-                      height: 1.3625,
                       color: Color(0xff000000),
                     ),
                   ),
@@ -106,7 +120,7 @@ class MyUmkmPage extends StatelessWidget {
                                 ),
                               ),
                               Text(
-                                'Yusuf Bakery',
+                                nama,
                                 style: TextStyle(
                                   fontSize: 14,
                                   fontWeight: FontWeight.w400,
@@ -128,7 +142,7 @@ class MyUmkmPage extends StatelessWidget {
                                 ),
                               ),
                               Text(
-                                'Bandung',
+                                alamat,
                                 style: TextStyle(
                                   fontSize: 14,
                                   fontWeight: FontWeight.w400,
@@ -150,7 +164,7 @@ class MyUmkmPage extends StatelessWidget {
                                 ),
                               ),
                               Text(
-                                '2016',
+                                tahun.toString(),
                                 style: TextStyle(
                                   fontSize: 14,
                                   fontWeight: FontWeight.w400,
@@ -172,7 +186,7 @@ class MyUmkmPage extends StatelessWidget {
                                 ),
                               ),
                               Text(
-                                'Makanan',
+                                jenis,
                                 style: TextStyle(
                                   fontSize: 14,
                                   fontWeight: FontWeight.w400,
@@ -196,7 +210,7 @@ class MyUmkmPage extends StatelessWidget {
                               ),
                               Flexible(
                                 child: Text(
-                                  'Yusuf Bakery merupakan UMKM yang bergerak di bidang perdagangan, menjual berbagai macam jenis roti, donut, dan lainnya.',
+                                  deskripsi,
                                   style: TextStyle(
                                     fontSize: 14,
                                     fontWeight: FontWeight.w400,
@@ -211,7 +225,7 @@ class MyUmkmPage extends StatelessWidget {
                             padding: EdgeInsets.symmetric(vertical: 20),
                             child: Divider(
                               color: Colors.black,
-                              thickness: 1.0,
+                              thickness: 0.5,
                             ),
                           ),
                         ],
@@ -223,7 +237,15 @@ class MyUmkmPage extends StatelessWidget {
                       Navigator.of(context).push(
                         MaterialPageRoute(
                           builder: (context) {
-                            return UbahDataUMKM();
+                            return UbahDataUMKM(
+                              id: id,
+                              img: img,
+                              nama: nama,
+                              alamat: alamat,
+                              tahun: tahun,
+                              jenis: jenis,
+                              deskripsi: deskripsi,
+                            );
                           },
                         ),
                       );
@@ -248,27 +270,6 @@ class MyUmkmPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  // TextButton(
-                  //   onPressed: () => showDialog<String>(
-                  //     context: context,
-                  //     builder: (BuildContext context) => Dialog(
-                  //       child: Padding(
-                  //         padding: const EdgeInsets.all(8.0),
-                  //         child: Column(
-                  //           mainAxisSize: MainAxisSize.min,
-                  //           mainAxisAlignment: MainAxisAlignment.center,
-                  //           children: <Widget>[
-                  //             const SizedBox(height: 15),
-                  //             RatingDialogue(),
-                  //             const SizedBox(height: 15),
-                  //           ],
-                  //         ),
-                  //       ),
-                  //     ),
-                  //   ),
-                  //   child: const Text('Show Dialog'),
-                  // ),
-
                   GestureDetector(
                     onTap: () {
                       Navigator.of(context).push(

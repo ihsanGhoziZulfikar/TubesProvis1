@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:login_page/addDataPage.dart';
-import 'package:login_page/loginPage.dart';
+import 'addDataPage.dart';
+import 'loginPage.dart';
 
 class RegisterPage extends StatelessWidget {
   // This widget is the root of your application.
@@ -15,7 +15,7 @@ class RegisterPage extends StatelessWidget {
                 Container(
                   padding: EdgeInsets.all(20),
                   child: Image.asset(
-                    '../assets/images/logo.png',
+                    'assets/images/logo.png',
                     width: 100,
                     height: 100,
                   ),

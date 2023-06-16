@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:login_page/navbar.dart';
+import 'navbar.dart';
 
 import 'home.dart';
 
@@ -20,7 +20,7 @@ class AddDataPage extends StatelessWidget {
                   height: MediaQuery.of(context).size.height * 0.3,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage('../assets/images/arc.png'),
+                      image: AssetImage('assets/images/arc.png'),
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -78,7 +78,7 @@ class AddDataPage extends StatelessWidget {
                                   children: [
                                     Image.asset(
                                       width: 50,
-                                      '../assets/images/icon-camera.png',
+                                      'assets/images/icon-camera.png',
                                     ),
                                   ],
                                 ),
@@ -116,7 +116,7 @@ class AddDataPage extends StatelessWidget {
                                   children: [
                                     Image.asset(
                                       width: 50,
-                                      '../assets/images/icon-identification.png',
+                                      'assets/images/icon-identification.png',
                                     ),
                                   ],
                                 ),
@@ -154,7 +154,7 @@ class AddDataPage extends StatelessWidget {
                                   children: [
                                     Image.asset(
                                       width: 50,
-                                      '../assets/images/icon-document.png',
+                                      'assets/images/icon-document.png',
                                     ),
                                   ],
                                 ),
@@ -170,7 +170,7 @@ class AddDataPage extends StatelessWidget {
                                 Navigator.of(context).push(
                                   MaterialPageRoute(
                                     builder: (context) {
-                                      return Navbar();
+                                      return Navbar(id: 1);
                                     },
                                   ),
                                 );

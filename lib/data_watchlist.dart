@@ -1,18 +1,24 @@
+import 'package:android/umkmProfile.dart';
 import 'package:flutter/material.dart';
-import 'package:login_page/umkmDetailPage.dart';
+import 'package:android/umkmDetailPage.dart';
 
 class DataWatchlist extends StatelessWidget {
+  final int id;
   final String img;
-  final String name;
-  final String nameUsaha;
-  final String location;
+  final String nama;
+  final String jenis;
+  final String alamat;
+  final String deskripsi;
 
-  const DataWatchlist(
-      {super.key,
-      required this.img,
-      required this.name,
-      required this.nameUsaha,
-      required this.location});
+  const DataWatchlist({
+    super.key,
+    required this.id,
+    required this.img,
+    required this.nama,
+    required this.alamat,
+    required this.deskripsi,
+    required this.jenis,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -21,12 +27,13 @@ class DataWatchlist extends StatelessWidget {
         Navigator.of(context).push(
           MaterialPageRoute(
             builder: (context) {
-              return Scaffold(
-                body: Center(
-                  child: SingleChildScrollView(
-                    child: UmkmDetailPage(),
-                  ),
-                ),
+              return UmkmProfile(
+                id: id,
+                img: img,
+                nama: nama,
+                alamat: alamat,
+                deskripsi: deskripsi,
+                jenis: jenis,
               );
             },
           ),
@@ -65,13 +72,13 @@ class DataWatchlist extends StatelessWidget {
                 children: [
                   SizedBox(height: 2.5),
                   Text(
-                    name,
+                    nama,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   // SizedBox(height: 2.0),
-                  Text(nameUsaha),
+                  Text(jenis),
                   // SizedBox(height: 5.5),
                   Row(
                     children: [
@@ -81,7 +88,7 @@ class DataWatchlist extends StatelessWidget {
                         size: 16,
                       ),
                       SizedBox(width: 4.0),
-                      Text(location),
+                      Text(alamat),
                     ],
                   ),
                 ],

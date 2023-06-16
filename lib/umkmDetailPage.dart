@@ -1,5 +1,5 @@
+import 'package:android/ulasanUmkm.dart';
 import 'package:flutter/material.dart';
-import 'package:login_page/ulasan.dart';
 
 import 'bayarpinjaman.dart';
 
@@ -18,11 +18,11 @@ class UmkmDetailPage extends StatelessWidget {
                 children: [
                   ClipRRect(
                     borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(30.0),
-                      bottomRight: Radius.circular(30.0),
+                      bottomLeft: Radius.circular(50.0),
+                      bottomRight: Radius.circular(50.0),
                     ),
                     child: Image.asset(
-                      '../assets/images/toko.jpg',
+                      'assets/images/toko.jpg',
                     ),
                   ),
                   Positioned(
@@ -39,10 +39,11 @@ class UmkmDetailPage extends StatelessWidget {
                             margin: EdgeInsets.symmetric(
                                 vertical: 20, horizontal: 10),
                             child: Container(
+                              width: 35,
                               color: Colors.grey,
                               child: Image.asset(
-                                '../assets/images/icon-camera.png',
-                                // width: 30,
+                                'assets/images/icon-camera.png',
+                                fit: BoxFit.cover,
                               ),
                             ),
                           ),
@@ -52,30 +53,33 @@ class UmkmDetailPage extends StatelessWidget {
                   ),
                 ],
               ),
+              Padding(
+                padding: const EdgeInsets.all(27),
+                child: Text(
+                  'Properti / Cahaya Makmur',
+                  style: TextStyle(fontSize: 12),
+                ),
+              ),
               Container(
-                margin: EdgeInsets.all(20),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      'Properti / Cahaya Makmur',
-                    ),
-                    Container(
-                      margin: EdgeInsets.all(20),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 35),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Container(
-                            margin: EdgeInsets.symmetric(vertical: 5),
-                            child: Text(
-                              'Cahaya Makmur',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontSize: 26,
-                                fontWeight: FontWeight.w400,
-                                height: 0.6,
-                              ),
+                          Text(
+                            'Cahaya Makmur',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 26,
+                              fontWeight: FontWeight.w400,
+                              height: 0.6,
                             ),
+                          ),
+                          SizedBox(
+                            height: 10,
                           ),
                           Text(
                             'Nama Pemilik',
@@ -85,15 +89,20 @@ class UmkmDetailPage extends StatelessWidget {
                               fontWeight: FontWeight.w200,
                             ),
                           ),
+                          SizedBox(
+                            height: 20,
+                          ),
                           Row(
-                            // crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Container(
-                                margin: EdgeInsets.all(5),
+                                margin: EdgeInsets.only(left: 10),
                                 child: Icon(
                                   Icons.star,
                                   size: 15,
                                 ),
+                              ),
+                              SizedBox(
+                                width: 5,
                               ),
                               Text(
                                 '5.0',
@@ -118,15 +127,20 @@ class UmkmDetailPage extends StatelessWidget {
                               ),
                             ],
                           ),
+                          SizedBox(
+                            height: 10,
+                          ),
                           Row(
-                            // crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Container(
-                                margin: EdgeInsets.all(5),
+                                margin: EdgeInsets.only(left: 10),
                                 child: Icon(
                                   Icons.thumb_up,
                                   size: 15,
                                 ),
+                              ),
+                              SizedBox(
+                                width: 5,
                               ),
                               Text(
                                 'UMKM direkomendasikan',
@@ -142,6 +156,9 @@ class UmkmDetailPage extends StatelessWidget {
                               ),
                             ],
                           ),
+                          SizedBox(
+                            height: 20,
+                          ),
                           Text(
                             'Deskripsi',
                             textAlign: TextAlign.center,
@@ -150,12 +167,18 @@ class UmkmDetailPage extends StatelessWidget {
                               fontWeight: FontWeight.w400,
                             ),
                           ),
+                          SizedBox(
+                            height: 10,
+                          ),
                           Text(
                             'Cahaya makmur merupakan UMKM yang bergerak di bidang properti, menjual berbagai macam jenis rumah, tanah, apartemen, dan lainnya.',
                             style: TextStyle(
                               fontSize: 13,
                               fontWeight: FontWeight.w400,
                             ),
+                          ),
+                          SizedBox(
+                            height: 20,
                           ),
                           Text(
                             'Kebutuhan Dana',
@@ -165,22 +188,29 @@ class UmkmDetailPage extends StatelessWidget {
                               fontWeight: FontWeight.w400,
                             ),
                           ),
-                          Text(
-                            'Rp. 5.600.000',
-                            style: TextStyle(
-                              fontSize: 13,
-                              fontWeight: FontWeight.w400,
+                          Padding(
+                            padding: const EdgeInsets.all(7.0),
+                            child: Text(
+                              'Rp. 5.600.000',
+                              style: TextStyle(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w400,
+                              ),
                             ),
                           ),
                         ],
                       ),
                     ),
+                    SizedBox(
+                      height: 33,
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         Container(
+                          width: 150,
                           padding: EdgeInsets.symmetric(
-                              vertical: 15, horizontal: 10),
+                              vertical: 15, horizontal: 17),
                           decoration: BoxDecoration(
                             color: Color(0xff669ad9),
                             borderRadius: BorderRadius.circular(10),
@@ -190,7 +220,7 @@ class UmkmDetailPage extends StatelessWidget {
                               Navigator.of(context).push(
                                 MaterialPageRoute(
                                   builder: (context) {
-                                    return Ulasan();
+                                    return UlasanUmkm();
                                   },
                                 ),
                               );
@@ -201,18 +231,21 @@ class UmkmDetailPage extends StatelessWidget {
                                 children: [
                                   Container(
                                     child: Image.asset(
-                                      '../assets/images/icon-document.png',
-                                      height: 15,
+                                      'assets/images/icon-document.png',
+                                      height: 20,
+                                      width: 20,
                                     ),
                                   ),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
                                   Text(
-                                    // lihatulasanMKL (1:4846)
                                     'Lihat Ulasan',
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w400,
-                                    ),
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w400,
+                                        color: Colors.white),
                                   ),
                                 ],
                               ),
@@ -230,8 +263,9 @@ class UmkmDetailPage extends StatelessWidget {
                             );
                           },
                           child: Container(
+                            width: 150,
                             padding: EdgeInsets.symmetric(
-                                vertical: 15, horizontal: 10),
+                                vertical: 15, horizontal: 12),
                             decoration: BoxDecoration(
                               color: Color(0xff669ad9),
                               borderRadius: BorderRadius.circular(10),
@@ -242,17 +276,21 @@ class UmkmDetailPage extends StatelessWidget {
                                 children: [
                                   Container(
                                     child: Image.asset(
-                                      '../assets/images/icon-global-currency.png',
-                                      height: 15,
+                                      'assets/images/icon-global-currency.png',
+                                      height: 20,
+                                      width: 20,
                                     ),
                                   ),
+                                  SizedBox(
+                                    width: 7,
+                                  ),
                                   Text(
-                                    // lihatulasanMKL (1:4846)
                                     'Beri Pinjaman',
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.w400,
+                                      color: Colors.white,
                                     ),
                                   ),
                                 ],
